@@ -80,7 +80,8 @@ str_glue("this{mean(cars$mpg)}", .sep=":", "is the mpg mean")
 # Anything inside the {} can be calculated in the R
 
 str_glue("the car model {cars$name} has horserpower of {mean(cars$horsepower)}") %>% 
-  str_trunc()
+  as.data.frame() %>% 
+  view()
 
 
 
